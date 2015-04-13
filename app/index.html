@@ -26,24 +26,24 @@
 
       <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-          <form onsubmit="this.preventDefault()" class="panel panel-success">
+          <div class="panel panel-success">
             <div class="panel-heading">Proceso</div>
-            <fieldset class="panel-body form-horizontal">
+            <div class="panel-body form-horizontal">
               <div class="form-group">
                 <div class="control-label col-sm-4">Rafaga: </div>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control"></input>
+                  <input id='rafaga' type="text" class="form-control"></input>
                 </div>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <div class="control-label col-sm-4">Proceso: </div>
                 <div class="col-sm-8">
                   <input type="text" class="form-control">
                 </div>
-              </div>
-              <button class="btn btn-success btn-block">Agregar</button>
-            </fieldset>
-          </form>
+              </div> -->
+              <button id="agregar" class="btn btn-success btn-block">Agregar</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -75,7 +75,7 @@
                   <th>Rafaga</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id='process-ready-view'>
                 <tr>
                   <td>0</td>
                   <td>3</td>
@@ -165,6 +165,7 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/app.js"></script>
         <!-- endbuild -->
   </body>
 </html>

@@ -1,29 +1,27 @@
 /* jshint devel:true */
 
-function Element(value){
-  this.value = value;
-  this.next;
-  this.hasNext = function(){
-    return !!this.next;
+var Element = function initialize(){
+  var index = 0;
+  function _Element(rafaga){
+    this.rafaga = rafaga;
+    this.index = index++;
   }
-  this.getNext = function(){
-    return next;
-  }
-  this.add = function(value){
-    if(next){
-      next.add(value);
-    } else{
-      next = new Element(value);
-    }
-  }
+  return _Element;
 }
 
 function Queue(){
-  this.size = 0;
-  this.enqueue = function(value){
-    size += 1;
+  this.data = [];
+  this.enqueue = function(element){
+    console.log(element.rafaga);
+    this.data.push(element);
+    this.data.sort(function(e1, e2){
+      return e1.rafaga < e2.rafaga;
+    });
   }
   this.dequeue = function(){
-    size -+ 1;
+    this.data.shift();
+  }
+  this.values = function(){
+    return this.data;
   }
 }
